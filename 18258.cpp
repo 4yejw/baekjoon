@@ -1,4 +1,5 @@
 /*
+#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 using namespace std;
 
@@ -79,17 +80,34 @@ bool LinkedQueue::IsEmpty() {
 	return Count == 0;
 }
 
+
 int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+
 	int N = 0;
 	cin >> N;
-
 	LinkedQueue Q;
-	for (int i = 1; i <= N; i++)
-		Q.Push(i);
-	while (Q.GetSize() > 1) {
-		Q.Pop();
-		Q.Push(Q.Pop());
+
+	for (int i = 0; i < N; i++) {
+		string S;
+		cin >> S;
+
+		if (S == "push") {
+			int value = 0;
+			cin >> value;
+			Q.Push(value);
+		}
+		else if (S == "pop")
+			cout << Q.Pop() << '\n';
+		else if (S == "size")
+			cout << Q.GetSize() << '\n';
+		else if (S == "empty")
+			cout << Q.IsEmpty() << '\n';
+		else if (S == "front")
+			cout << Q.GetFront() << '\n';
+		else if (S == "back")
+			cout << Q.GetRear() << '\n';
 	}
-	cout << Q.GetFront() << '\n';
 }
 */ 

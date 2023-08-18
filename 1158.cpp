@@ -1,4 +1,4 @@
-/*
+//요세푸스 문제 
 #include <iostream>
 using namespace std;
 
@@ -80,16 +80,20 @@ bool LinkedQueue::IsEmpty() {
 }
 
 int main() {
-	int N = 0;
-	cin >> N;
-
+	int N = 0, K = 0;
+	cin >> N >> K;
 	LinkedQueue Q;
 	for (int i = 1; i <= N; i++)
 		Q.Push(i);
-	while (Q.GetSize() > 1) {
-		Q.Pop();
-		Q.Push(Q.Pop());
-	}
-	cout << Q.GetFront() << '\n';
+
+	int i = 1;
+	cout << '<';
+	while (Q.GetSize()!=0) {
+		if (Q.GetSize() == 1)
+			cout << Q.Pop()<<'>';
+		else if (i++ % K == 0)
+			cout << Q.Pop() << ", ";
+		else
+			Q.Push(Q.Pop());
+	}			                                    
 }
-*/ 
