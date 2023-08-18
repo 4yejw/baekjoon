@@ -1,4 +1,3 @@
-/*
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 using namespace std;
@@ -74,13 +73,13 @@ int StackClass::Size() {
 
 int main() {
 	bool Nice = 1;
-	int N = 0;//ÇĞ»ıµéÀÇ ¼ö
+	int N = 0;//í•™ìƒë“¤ì˜ ìˆ˜
 	scanf("%d", &N);
 	StackClass S;
-	int key = 1;//¹øÈ£Ç¥ ¼ø¼­
+	int key = 1;//ë²ˆí˜¸í‘œ ìˆœì„œ
 
 	for (int i = 0; i < N; i++) {
-		int k = 0;//ÁÙ¼­ÀÖ´Â ÇĞ»ı ¹øÈ£Ç¥
+		int k = 0;//ì¤„ì„œìˆëŠ” í•™ìƒ ë²ˆí˜¸í‘œ
 		scanf("%d", &k);
 
 		while (S.Size() != 0 && S.GetTop() == key) {
@@ -88,12 +87,12 @@ int main() {
 			key++;
 		}
 
-		if (k == key) //¼ø¼­´ë·Î ÀÌ¸é
+		if (k == key) //ìˆœì„œëŒ€ë¡œ ì´ë©´
 			key++;
-		else { //¼ø¼­°¡ ¾Æ´Ï¸é
-			if (S.Size() != 0 && S.GetTop() < k)//Sad°¡ µÇ´Â °æ¿ì 
+		else { //ìˆœì„œê°€ ì•„ë‹ˆë©´
+			if (S.Size() != 0 && S.GetTop() < k)//Sadê°€ ë˜ëŠ” ê²½ìš° 
 				Nice = 0;
-			S.Push(k);//½ºÅÃ¿¡ push
+			S.Push(k);//ìŠ¤íƒì— push
 		}
 	}
 	if (Nice)
@@ -101,4 +100,3 @@ int main() {
 	else
 		printf("Sad\n");
 }
-*/

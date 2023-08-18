@@ -1,4 +1,3 @@
-//요세푸스 문제 
 #include <iostream>
 using namespace std;
 
