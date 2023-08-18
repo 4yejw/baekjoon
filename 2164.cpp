@@ -1,4 +1,3 @@
-/*
 #include <iostream>
 using namespace std;
 
@@ -91,5 +90,4 @@ int main() {
 		Q.Push(Q.Pop());
 	}
 	cout << Q.GetFront() << '\n';
-}
-*/ 
+} 
