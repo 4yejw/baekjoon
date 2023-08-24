@@ -1,4 +1,3 @@
-/*
 #include <iostream>
 using namespace std;
 int main() {
@@ -13,4 +12,4 @@ int main() {
 	else 
 		cout << "Error\n";
 }
-*/
+
